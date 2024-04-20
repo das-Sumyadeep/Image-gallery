@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 search-results "
+infiniteScroll
+(scrolled)="onScroll()">
+
+    <div class="col" *ngFor="let image of images">
+        <div class="card">
+            <img src={{image.download_url}} class="card-img-top" alt="random_pics">
+            <div class="card-body d-flex justify-content-between">
+                <h5 class="card-title" highlightNumber>{{image.author}}</h5>
+                <a href={{image.download_url}} class="btn btn-primary">Download</a>
+            </div>
+        </div>
+    </div>
+    <p>Loading</p>
+</div>
